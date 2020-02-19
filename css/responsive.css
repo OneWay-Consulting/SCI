@@ -1,0 +1,226 @@
+body{text-align:left;}
+h3.encabezado{margin-top: 37px; border-top: #d6d6d6 solid 5px; padding-top: 55px; margin-bottom: 60px;}
+form.contacto{margin: 0 auto; width: 100%; max-width: 500px; box-sizing: border-box;}
+#ilogin{margin-right: -28px;}
+nav#principal {
+    width: 100%;
+    display: block;
+    border-top: solid 5px #d6d6d6;
+    border-right: solid 5px #d6d6d6;
+    border-bottom: solid 5px #d6d6d6;
+    padding: 5px 5px 5px 5px;
+    margin-top: 0;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+/*ul#menu{width: 100%!important; text-align: center!important;}
+ul#menu li{display: inline-block; vertical-align: top;}*/
+/*#datossesion {text-align: center; padding: 10px;}
+#datossesion p{ display: inline-block; margin: 0 10px;}
+*/
+div#_content {
+    display: block;
+    position: absolute;
+    margin-top: 0px;
+    padding: 5px 20px 0 20px;
+    width: 100%;
+    min-height: 90%;
+    text-align: center;
+    box-sizing: border-box;
+    /*border-top: solid 5px #d6d6d6;
+    border-bottom: solid 5px #d6d6d6;*/
+    z-index: 1
+}
+/*
+Generic Styling, for Desktops/Laptops
+*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+/*th {
+  background: #2961A9;
+  color: white;
+  font-weight: bold;
+}*/
+td, th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 25%;
+	}
+
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 20%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+
+	/*
+	Label the users
+	*/
+	#c_users td:nth-of-type(1):before { content: "ID User"; }
+	#c_users td:nth-of-type(2):before { content: "Nombre"; }
+	#c_users td:nth-of-type(3):before { content: "Rol"; }
+	#c_users td:nth-of-type(4):before { content: "Email"; }
+	#c_users td:nth-of-type(5):before { content: "Activo"; }
+
+	/*label partner*/
+	#c_partners td:nth-of-type(1):before { content: "C. Socio"; }
+	#c_partners td:nth-of-type(2):before { content: "N. Socio"; }
+	#c_partners td:nth-of-type(3):before { content: "Activo"; }
+	#c_partners td:nth-of-type(4):before { content: "E-mail"; }
+	#c_partners td:nth-of-type(5):before { content: "Tipo"; }
+	#c_partners td:nth-of-type(6):before { content: "Opciones"; }
+
+	/*label items*/
+	#c_items td:nth-of-type(1):before { content: "ID System"; }
+	#c_items td:nth-of-type(2):before { content: "Cod. Art."; }
+	#c_items td:nth-of-type(3):before { content: "Nom. Art."; }
+	#c_items td:nth-of-type(4):before { content: "Activo"; }
+	#c_items td:nth-of-type(5):before { content: "Ac. Series"; }
+	#c_items td:nth-of-type(6):before { content: "Opciones"; }
+
+	/*label purchase*/
+	#c_purchase td:nth-of-type(1):before { content: "ID System"; }
+	#c_purchase td:nth-of-type(2):before { content: "C. Socio"; }
+	#c_purchase td:nth-of-type(3):before { content: "N. Socio"; }
+	#c_purchase td:nth-of-type(4):before { content: "Referencia"; }
+	#c_purchase td:nth-of-type(5):before { content: "Fecha"; }
+	#c_purchase td:nth-of-type(6):before { content: "Total"; }
+	#c_purchase td:nth-of-type(6):before { content: "Estatus"; }
+	#c_purchase td:nth-of-type(6):before { content: "Opciones"; }
+
+
+	#c_requests td:nth-of-type(1):before { content: "ID"; }
+	#c_requests td:nth-of-type(2):before { content: "Fecha"; }
+	#c_requests td:nth-of-type(3):before { content: "Cliente"; }
+	#c_requests td:nth-of-type(4):before { content: "Referencia"; }
+	#c_requests td:nth-of-type(5):before { content: "Status"; }
+	#c_requests td:nth-of-type(6):before { content: "Opcion"; }
+	#c_stock td:nth-of-type(1):before { content: "Cod. Art."; }
+	#c_stock td:nth-of-type(2):before { content: "Nom. Art."; }
+	#c_stock td:nth-of-type(3):before { content: "Stock"; }
+	#c_stock td:nth-of-type(4):before { content: "Almacen"; }
+	#c_detail td:nth-of-type(1):before { content: "Articulo"; }
+	#c_detail td:nth-of-type(2):before { content: "Descripcion"; }
+	#c_detail td:nth-of-type(3):before { content: "Text. Lib."; }
+	#c_detail td:nth-of-type(4):before { content: "Cantidad"; }
+	#c_detail td:nth-of-type(5):before { content: "Prec U $ MXN"; }
+	#c_detail td:nth-of-type(6):before { content: "PU/Desc $ MXN"; }
+	#c_detail td:nth-of-type(7):before { content: "Desc. % "; }
+	#c_detail td:nth-of-type(8):before { content: "Opciones"; }
+	#c_detail2 td:nth-of-type(1):before { content: "Articulo"; }
+	#c_detail2 td:nth-of-type(2):before { content: "Descripcion"; }
+	#c_detail2 td:nth-of-type(3):before { content: "Text. Lib."; }
+	#c_detail2 td:nth-of-type(4):before { content: "Cantidad"; }
+	#c_detail2 td:nth-of-type(5):before { content: "Prec U $ MXN"; }
+	#c_detail2 td:nth-of-type(6):before { content: "PU/Desc $ MXN"; }
+	#c_detail2 td:nth-of-type(7):before { content: "Sub Tot$ MXN"; }
+	#c_detail2 td:nth-of-type(8):before { content: "Desc. % "; }
+
+	nav#principal {
+	    width: 100%;
+	    display: block;
+	    border-bottom: solid 5px #d6d6d6;
+	    padding: 10px;
+	    margin-top: 0;
+	    vertical-align: top;
+	    position: relative;
+	    height: auto;
+	    min-height: 20px;
+	    box-sizing: border-box;
+	    z-index: 9999;
+	}
+	div#_content {
+	    display: block;
+	    position: relative;
+	    margin-top: 5px;
+	    padding: 10px;
+	    width: 100%;
+	    height: auto;
+	    min-height: 20px;
+	    text-align: center;
+	    box-sizing: border-box;
+	    border-bottom: solid 5px #d6d6d6;
+	    z-index: 1
+	}
+	/*#menu{width: 100%; text-align: center;}
+	#menu li, nav#principal p{display: inline-block; margin: 0 5px;}*/
+	#datossesion{text-align: center; padding: 10px}
+	.contacto2{padding-left: 5px; padding-right: 5px; box-sizing: border-box;}
+
+}
+
+/*
+@media all and (min-width: 670px) and (max-width: 1296px){
+
+}
+@media all and (max-width: 799px){
+	.completo, .dostercios, .untercio{width: 100%!important;display: block; padding: 5px 0!important;}
+  .gris{padding: 5px 0}
+
+}
+*/
+
+/*
+@media all and (max-width: 474px){
+  #ilogin{margin-right: 0;}
+  form.contacto{padding-left: 5%; padding-right: 0; box-sizing: border-box;}
+  form.contacto input[type="text"], form.contacto input[type="password"]{width: 90%; display: block;}
+  nav#principal{width:100%; display: inline-block;}
+  .completo, .dostercios, .untercio{width: 100%!important;display: block; padding: 5px 0!important;}
+  .gris{padding: 5px!important; box-sizing: border-box;}
+  input, textarea{display: block; width: 100%; box-sizing: border-box;}
+
+}
+*/
+/*
+.completo, .dostercios, .untercio{text-align: left; vertical-align: top;}
+.completo{width: 100%; display: block;}
+.dostercios{width: 66%; display: inline-block;}
+.untercio{width: 33%; display: inline-block;}
+.medio{width: 49%; display: inline-block;}
+.contacto2{width: 100%; max-width: 900px; margin: 0 auto;}
+.gris{background: #ccc; padding: 10px; box-sizing: border-box;}
+*/

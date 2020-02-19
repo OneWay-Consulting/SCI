@@ -1,0 +1,43 @@
+
+
+/*PART TO MANAGER THE ALERTBOXES*/
+#alertBoxes{
+    display: block;
+    width: 500px;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.box-info, .box-success, .box-alert, .box-error{
+    clear: both;
+    border-width: 1px;
+    border-style: solid;
+    margin: 0px;
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-position: 0px 50%;
+    text-align: left;
+    -webkit-border-radius: 5px;
+    /*-moz-border-radius: 5px;*/
+}
+.box-info {
+    color: #00529b;
+    background-color: #bde5f8;
+    border-color: #00529b;
+}
+.box-success {
+    color: #4f8a10;
+    background-color: #dff2bf;
+    border-color: #4f8a10;
+}
+.box-alert {
+    color: #9f6000;
+    background-color: #feefb3;
+    border-color: #9f6000;
+}
+.box-error {
+    color: #d8000c;
+    background-color: #ffbaba;
+    border-color: #d8000c;
+}
+/*END PART TO MANAGER THE ALERTBOXES*/
