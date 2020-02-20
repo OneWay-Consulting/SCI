@@ -40,7 +40,7 @@ function _includes(){
         <script src='<? echo URLWEB;?>js/funciones-user.js' type="text/javascript"></script>
 
 
-        <title>Control web B</title>
+        <title>Control webX</title>
     </head>
 <? }
 function _header(){
